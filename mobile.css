@@ -10,37 +10,44 @@
   min-height: 100svh;
 }
 
-/* --- 01 Hero: show more of the portrait --- */
+/* =============================================
+   01 HERO — full-screen image, no reveal mask
+   ============================================= */
 .hero {
   min-height: 100svh;
   align-items: flex-end;
 }
+/* Portrait fills entire hero section */
 .hero-portrait {
   width: 100%;
-  height: 60%;
+  height: 100%;
   top: 0;
 }
 .hero-portrait img {
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center center;
 }
-/* Shrink the dark mask so more of the person is visible */
+/* Hide the desktop reveal mask completely on mobile */
 .hero-source-mask {
-  left: 78%;
-  right: 0;
-  top: 0;
-  height: 60%;
-  background: #020205;
+  display: none;
 }
 .hero-source-mask:after {
   display: none;
 }
+/* Simple bottom gradient for text readability only */
+.hero:after {
+  background: linear-gradient(0deg, #020205 38%, transparent 65%);
+  z-index: 1;
+}
+/* Hero text at bottom */
 .hero-copy {
   left: 24px;
+  right: 24px;
   top: auto;
-  bottom: 90px;
-  width: calc(100% - 48px);
+  bottom: 80px;
+  width: auto;
   padding: 0;
+  z-index: 3;
 }
 .hero h1 {
   font-size: clamp(40px, 11vw, 58px);
@@ -49,15 +56,15 @@
   position: static;
   margin-top: 20px;
 }
-.hero:after {
-  background: linear-gradient(0deg, #020205 48%, transparent 78%);
-}
 .screen-meta {
   left: 24px;
   right: 24px;
+  z-index: 5;
 }
 
-/* --- 02 About --- */
+/* =============================================
+   02 ABOUT
+   ============================================= */
 .about {
   min-height: auto;
   padding-bottom: 40px;
@@ -92,7 +99,9 @@
   height: 20vh;
 }
 
-/* --- 03 Stories --- */
+/* =============================================
+   03 STORIES
+   ============================================= */
 .stories {
   display: block;
   padding: 80px 20px 60px;
@@ -118,7 +127,9 @@
   min-height: auto;
 }
 
-/* --- 04 Side Quests --- */
+/* =============================================
+   04 SIDE QUESTS
+   ============================================= */
 .side-quests {
   min-height: auto;
   padding: 80px 20px;
@@ -150,7 +161,9 @@
   font-size: 15px;
 }
 
-/* --- 05 Project --- */
+/* =============================================
+   05 PROJECT
+   ============================================= */
 .project {
   min-height: auto;
   padding: 80px 20px;
@@ -193,7 +206,9 @@
   margin-top: 40px;
 }
 
-/* --- 06 Together --- */
+/* =============================================
+   06 TOGETHER
+   ============================================= */
 .together {
   min-height: auto;
   padding: 80px 20px;
@@ -220,7 +235,9 @@
   font-size: 12px !important;
 }
 
-/* --- 07 AI Section --- */
+/* =============================================
+   07 AI SECTION
+   ============================================= */
 .ai-section {
   min-height: auto;
   background: linear-gradient(#eee8de 0%, #c4b3c8 40%, #151c30 62%);
@@ -257,7 +274,9 @@
   margin-top: 40px;
 }
 
-/* --- 08 Now Section --- */
+/* =============================================
+   08 NOW SECTION
+   ============================================= */
 .now-section {
   min-height: auto;
   padding: 80px 20px;
@@ -301,7 +320,9 @@
   margin-top: 40px;
 }
 
-/* --- 09 Growing Section --- */
+/* =============================================
+   09 GROWING SECTION
+   ============================================= */
 .growing-section {
   min-height: auto;
   padding: 80px 20px;
@@ -342,7 +363,9 @@
   margin-top: 40px;
 }
 
-/* --- Ending --- */
+/* =============================================
+   ENDING
+   ============================================= */
 .ending {
   min-height: auto;
   padding: 80px 24px;
@@ -351,7 +374,9 @@
   font-size: clamp(36px, 10vw, 56px);
 }
 
-/* --- Header --- */
+/* =============================================
+   HEADER
+   ============================================= */
 .site-header {
   height: 60px;
   padding: 0 16px;
