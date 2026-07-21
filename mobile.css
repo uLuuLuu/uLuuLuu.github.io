@@ -1,0 +1,388 @@
+/* ============================================================
+   mobile.css — Mobile overrides (max-width: 900px)
+   Loaded via <link media="(max-width:900px)"> so desktop
+   browsers never parse this file. Zero risk to desktop.
+   ============================================================ */
+
+/* --- Core: allow sections to expand on mobile --- */
+.screen {
+  overflow: visible;
+  min-height: 100svh;
+}
+
+/* --- 01 Hero: show more of the portrait --- */
+.hero {
+  min-height: 100svh;
+  align-items: flex-end;
+}
+.hero-portrait {
+  width: 100%;
+  height: 60%;
+  top: 0;
+}
+.hero-portrait img {
+  object-fit: cover;
+  object-position: center 30%;
+}
+/* Shrink the dark mask so more of the person is visible */
+.hero-source-mask {
+  left: 78%;
+  right: 0;
+  top: 0;
+  height: 60%;
+  background: #020205;
+}
+.hero-source-mask:after {
+  display: none;
+}
+.hero-copy {
+  left: 24px;
+  top: auto;
+  bottom: 90px;
+  width: calc(100% - 48px);
+  padding: 0;
+}
+.hero h1 {
+  font-size: clamp(40px, 11vw, 58px);
+}
+.hero .outline-button {
+  position: static;
+  margin-top: 20px;
+}
+.hero:after {
+  background: linear-gradient(0deg, #020205 48%, transparent 78%);
+}
+.screen-meta {
+  left: 24px;
+  right: 24px;
+}
+
+/* --- 02 About --- */
+.about {
+  min-height: auto;
+  padding-bottom: 40px;
+}
+.about-title {
+  left: 24px;
+  top: 10vh;
+}
+.about-title h2 {
+  font-size: clamp(36px, 10vw, 48px);
+}
+.scorpio-map {
+  right: 5vw;
+  top: 34vh;
+  width: 88vw;
+  height: 28vh;
+}
+.scorpio-label {
+  font-size: 11px;
+}
+.belief-note {
+  left: 20px;
+  right: 20px;
+  width: auto;
+  bottom: 10vh;
+  padding: 24px 28px;
+}
+.about-footnote {
+  display: none;
+}
+.material-bridge {
+  height: 20vh;
+}
+
+/* --- 03 Stories --- */
+.stories {
+  display: block;
+  padding: 80px 20px 60px;
+  min-height: auto;
+}
+.stories-heading {
+  padding: 0;
+  margin-bottom: 60px;
+}
+.stories-heading h2 {
+  font-size: clamp(36px, 10vw, 54px);
+}
+.story-grid {
+  display: grid;
+  gap: 70px;
+}
+.journey,
+.journey:nth-child(2),
+.journey:nth-child(3) {
+  transform: none;
+}
+.journey-copy p {
+  min-height: auto;
+}
+
+/* --- 04 Side Quests --- */
+.side-quests {
+  min-height: auto;
+  padding: 80px 20px;
+}
+.side-heading h2 {
+  font-size: clamp(40px, 12vw, 64px);
+  margin-top: 40px;
+}
+.quest-path,
+.paper-ticket {
+  display: none;
+}
+.quest {
+  position: relative !important;
+  left: auto !important;
+  top: auto !important;
+  width: 100% !important;
+  margin: 50px 0;
+}
+.coach-note {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  margin: 40px 0 0;
+  padding: 24px 28px;
+}
+.coach-note blockquote {
+  font-size: 15px;
+}
+
+/* --- 05 Project --- */
+.project {
+  min-height: auto;
+  padding: 80px 20px;
+}
+.project-heading h2 {
+  font-size: clamp(32px, 9vw, 50px);
+}
+.project-collage {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 40px 0;
+  padding: 14px;
+}
+.project-art {
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  transform: none !important;
+}
+.project-notes {
+  position: relative;
+  right: auto;
+  top: auto;
+  width: 100%;
+}
+.project-process {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin-top: 40px;
+}
+
+/* --- 06 Together --- */
+.together {
+  min-height: auto;
+  padding: 80px 20px;
+}
+.together-heading h2 {
+  font-size: clamp(32px, 9vw, 50px);
+}
+.collab-layout {
+  grid-template-columns: 1fr;
+}
+.launch-items {
+  grid-template-columns: repeat(3, 1fr);
+}
+.collab-bottom {
+  position: relative;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  display: grid;
+  gap: 14px;
+  margin-top: 40px;
+}
+.collab-detail {
+  font-size: 12px !important;
+}
+
+/* --- 07 AI Section --- */
+.ai-section {
+  min-height: auto;
+  background: linear-gradient(#eee8de 0%, #c4b3c8 40%, #151c30 62%);
+  padding: 80px 20px;
+}
+.ai-copy {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100%;
+}
+.ai-copy h2 {
+  font-size: clamp(32px, 9vw, 52px);
+}
+.ai-system {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100%;
+  height: 40vh;
+  margin-top: 40px;
+}
+.orbit {
+  width: 120px;
+  height: 120px;
+}
+.ai-section > blockquote {
+  position: relative;
+  right: auto;
+  top: auto;
+  width: 100%;
+  padding: 28px;
+  font-size: 16px;
+  margin-top: 40px;
+}
+
+/* --- 08 Now Section --- */
+.now-section {
+  min-height: auto;
+  padding: 80px 20px;
+}
+.now-intro {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100%;
+}
+.now-intro h2 {
+  font-size: clamp(36px, 10vw, 55px);
+}
+.now-timeline {
+  position: relative;
+  right: auto;
+  left: auto;
+  top: auto;
+  width: 100%;
+  gap: 40px;
+  margin-top: 40px;
+}
+.now-timeline:before {
+  left: -30px;
+}
+.torn-strip {
+  padding-left: 44px;
+}
+.torn-strip:before {
+  left: -36px;
+}
+.torn-strip b {
+  position: static;
+  display: block;
+  margin-bottom: 8px;
+}
+.grow-note {
+  position: relative;
+  right: auto;
+  bottom: auto;
+  margin-top: 40px;
+}
+
+/* --- 09 Growing Section --- */
+.growing-section {
+  min-height: auto;
+  padding: 80px 20px;
+}
+.growing-section .future-copy {
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100%;
+}
+.growing-section .future-copy h2 {
+  font-size: clamp(32px, 9vw, 48px);
+}
+.experience-field {
+  position: relative;
+  top: auto;
+  inset: auto;
+  min-height: 50vh;
+  width: 100%;
+}
+.experience-star {
+  font-size: 9px;
+}
+.experience-star:after {
+  display: none;
+}
+.growing-seed {
+  left: 50%;
+  bottom: 5%;
+}
+.seed-closing {
+  position: relative !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: 100% !important;
+  font-size: 18px !important;
+  margin-top: 40px;
+}
+
+/* --- Ending --- */
+.ending {
+  min-height: auto;
+  padding: 80px 24px;
+}
+.ending h2 {
+  font-size: clamp(36px, 10vw, 56px);
+}
+
+/* --- Header --- */
+.site-header {
+  height: 60px;
+  padding: 0 16px;
+}
+.site-mark span,
+.site-mark i {
+  display: none;
+}
+.menu-button {
+  display: block;
+}
+.site-header nav {
+  display: none;
+  position: absolute;
+  right: 12px;
+  top: 52px;
+  flex-direction: column;
+  gap: 14px;
+  background: #151522ee;
+  color: white;
+  padding: 18px;
+}
+.site-header nav.is-open {
+  display: flex;
+}
+
+/* --- Ensure images never overflow --- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 0;
+}
