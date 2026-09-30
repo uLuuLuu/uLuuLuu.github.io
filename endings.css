@@ -1,0 +1,22 @@
+.teaching{align-items:start}
+.teaching-story{position:sticky;top:110px}
+.teaching-story h2{font-size:clamp(34px,3.6vw,52px);line-height:1.4;text-wrap:balance}
+.teaching-whisper{margin-top:35px}
+.teaching-whisper p{line-height:2.1!important;color:#e7d7c5!important}
+.teaching .teaching-photos figure{width:100%;transform:none;margin:0}
+.teaching .teaching-photos{gap:48px}
+.story-ending{height:240svh;background:#070911}
+.ending-stage{position:sticky;top:0;height:100svh;min-height:650px;overflow:hidden;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:90px 6%;background:radial-gradient(ellipse at 50% 68%,#342a352f,transparent 58%)}
+.ending-stage h2{position:relative;z-index:2;text-align:center;font:clamp(25px,3.6vw,52px)/1.7 var(--serif);letter-spacing:.01em}
+.ending-stage h2 span{display:block;opacity:var(--line-light,1);transition:none}
+.ending-stage h2 span+span{margin-top:12px}
+.ending-star{position:absolute;left:calc(50% - 17px);top:76%;width:34px;height:34px;color:#efcf99;transform:translateY(var(--star-y,0px)) scale(var(--star-size,1));filter:drop-shadow(0 0 18px #e4c88c66)}
+.ending-star svg{width:100%;height:100%;fill:currentColor}
+.ending-next{position:absolute;bottom:5%;font-size:12px;color:#d8c5ac;padding:12px;opacity:var(--next-light,1);border-bottom:1px solid #ac977455;z-index:3}
+.ending-orbit{position:absolute;inset:0;pointer-events:none}
+.ending-orbit i{position:absolute;left:50%;top:76%;width:5px;height:5px;border-radius:50%;background:#e9d9bc;transform:translate(calc(var(--ox)*var(--spread,1)),calc(var(--oy)*var(--spread,1)));opacity:var(--orbit-light,.6)}
+.ending-orbit i:nth-child(1){--ox:-270px;--oy:-320px}.ending-orbit i:nth-child(2){--ox:250px;--oy:-220px}.ending-orbit i:nth-child(3){--ox:-180px;--oy:-80px}.ending-orbit i:nth-child(4){--ox:100px;--oy:-440px}.ending-orbit i:nth-child(5){--ox:320px;--oy:20px}
+#spark-outward .ending-stage{background:radial-gradient(ellipse at 50% 90%,#84602e30,transparent 65%),#070911}
+#spark-outward+.tavern{border-top:0}
+@media(max-width:700px){.teaching-story{position:static;grid-row:1}.teaching .teaching-photos{gap:28px}.ending-stage{min-height:600px}.ending-stage h2{font-size:clamp(22px,5.5vw,32px)}.ending-orbit{transform:scale(.65)}.ending-next{font-size:11px}.story-ending{height:210svh}}
+@media(prefers-reduced-motion:reduce){.story-ending{height:auto}.ending-stage{position:relative;min-height:640px;height:85svh}.ending-stage h2 span{opacity:1!important}.ending-star{transform:none!important}.ending-next{opacity:1!important}}

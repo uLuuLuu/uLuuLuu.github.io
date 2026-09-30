@@ -1,0 +1,30 @@
+/* Additions inherit the existing portfolio palette and reading layout. */
+#energy-next{display:inline-flex;align-items:center;gap:22px;min-height:94px;margin:18px 0 8px;padding:14px 20px 14px 4px;text-align:left}
+#energy-next .energy-die{display:grid;flex:none;grid-template:repeat(3,1fr)/repeat(3,1fr);gap:5px;width:60px;height:60px;padding:12px;border-radius:13px;background:#efdabc;color:#342b45;box-shadow:3px 9px 18px #0004;transform-origin:center}
+.energy-die i{width:8px;height:8px;border-radius:50%;background:currentColor;opacity:0;align-self:center;justify-self:center}
+.energy-die[data-face="1"] i:nth-child(5),
+.energy-die[data-face="2"] i:nth-child(1),.energy-die[data-face="2"] i:nth-child(9),
+.energy-die[data-face="3"] i:nth-child(1),.energy-die[data-face="3"] i:nth-child(5),.energy-die[data-face="3"] i:nth-child(9),
+.energy-die[data-face="4"] i:nth-child(1),.energy-die[data-face="4"] i:nth-child(3),.energy-die[data-face="4"] i:nth-child(7),.energy-die[data-face="4"] i:nth-child(9),
+.energy-die[data-face="5"] i:nth-child(odd),
+.energy-die[data-face="6"] i:nth-child(3n+1),.energy-die[data-face="6"] i:nth-child(3n){opacity:1}
+#energy-next:hover .energy-die{background:#ffe5b8}
+#energy-next:focus-visible{outline:2px solid #efdabc;outline-offset:6px}
+#energy-next:disabled{cursor:wait;opacity:.8}
+#reader-body p{white-space:pre-line;margin:0 0 1.25em}
+#reader-body figure{margin:30px 0;white-space:normal}
+#reader-body figure img{display:block;width:auto;max-width:100%;max-height:75svh;height:auto;margin:0 auto;object-fit:contain}
+#reader-source[hidden]{display:none}
+.campus-new-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:90px;align-items:start}
+.campus-new-photos button{display:block;width:100%;padding:0;border:0;background:none}
+.campus-new-photos img{display:block;width:100%;height:auto}
+.campus-whisper{margin-top:45px}
+.contact-invitation{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:36px;width:100%;margin-bottom:30px}
+footer .contact-invitation p{margin:0;text-wrap:balance}
+.contact-invitation figure{width:250px;max-width:100%;margin:0}
+.contact-invitation button{display:block;width:100%;padding:0;border:0;background:#fff}
+.contact-invitation img{display:block;width:100%;height:auto}
+.contact-invitation figcaption{font-size:12px;line-height:1.8;color:var(--gold);margin-top:12px}
+.contact-invitation button:focus-visible,.campus-new-photos button:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
+@media(max-width:600px){.campus-new-photos{grid-template-columns:1fr;gap:24px;margin-top:65px}.contact-invitation{grid-template-columns:1fr;gap:28px}.contact-invitation figure{width:min(280px,100%)}}
+@media(min-width:601px) and (prefers-reduced-motion:no-preference){.sketch-rail{height:840svh}}

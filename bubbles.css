@@ -1,0 +1,56 @@
+.bubble-entry{height:100svh;min-height:960px;max-height:none}
+.bubble-machine{position:absolute;left:7%;top:105px;width:190px;z-index:4}
+.bubble-machine svg{width:150px;height:auto;display:block}
+.machine-nozzle{position:absolute;left:112px;top:45px;width:1px;height:1px}
+.machine-wheel{transform-origin:128px 51px;animation:machine-turn 9s linear infinite;animation-play-state:paused}
+.bubble-entry.is-blowing .machine-wheel{animation-play-state:running}
+.machine-controls{display:flex;gap:17px;white-space:nowrap;margin-top:8px}
+.machine-controls button{padding:8px 0;border:0;border-bottom:1px solid #96879f;background:none;color:#d8c9df;font-size:11px;min-height:44px}
+.bubble-intro{top:39%;max-width:31%}
+.bubble-intro h1{font-size:clamp(42px,4.4vw,64px)}
+.bubble-field{left:41%;right:6%;top:15%;bottom:17%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-content:center;gap:25px 15px}
+.bubble-slot{position:relative!important;inset:auto!important;width:min(100%,180px)!important;justify-self:center;transform:none}
+.bubble-slot:nth-child(3n+2){top:28px!important}
+.bubble-slot-8{grid-column:3}
+.bubble-slot-7 .thought-bubble span{font-size:17px}
+.thought-bubble{animation:none;padding:20px 14px}
+.bubble-entry.is-blowing .thought-bubble:not(.used){animation:bubble-drift 6s ease-in-out infinite alternate}
+.thought-bubble:hover,.thought-bubble:focus-visible{animation-play-state:paused!important}
+.bubble-slot.waiting{visibility:hidden;pointer-events:none}
+.thought-bubble.kept small{color:#e6cfa9;letter-spacing:0}
+.thought-bubble.revealed{border-color:#e2c79f;background:radial-gradient(circle at 28% 22%,#fff0d830,transparent 65%)}
+.thought-bubble.rainbow{border-color:#d5bee0;background:conic-gradient(from 30deg,#dbaaab30,#e9d29430,#9fbfaf30,#8fafd530,#b6a1d430,#dbaaab30)}
+.bubble-ripples{position:absolute;inset:0;pointer-events:none;opacity:0}
+.bubble-ripples i{position:absolute;inset:0;border:1px solid #c9d5e8;border-radius:50%}
+.bubble-slot.rippling .bubble-ripples{opacity:1}
+.bubble-slot.rippling .bubble-ripples i{animation:poem-ripple 1.9s ease-out both}
+.bubble-slot.rippling .bubble-ripples i:nth-child(2){animation-delay:.22s}
+.bubble-slot.rippling .bubble-ripples i:nth-child(3){animation-delay:.44s}
+.bubble-air{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.air-bubble{position:absolute;width:25px;height:25px;border:1px solid #cdbedf77;border-radius:50%;background:radial-gradient(circle at 28% 22%,#fff6e12e,transparent 55%)}
+.bubble-bottom{bottom:4%}
+@keyframes machine-turn{to{transform:rotate(360deg)}}
+@keyframes poem-ripple{0%{transform:scale(.55);opacity:.8}100%{transform:scale(1.8);opacity:0}}
+@media(max-width:1000px) and (min-width:701px){.bubble-field{left:40%;right:4%;gap:25px 9px}.thought-bubble span{font-size:14px}.thought-bubble{padding:14px 9px}.bubble-slot-7 .thought-bubble span{font-size:14px}}
+@media(max-width:700px){
+ .bubble-entry{height:auto;min-height:0;padding:110px 6% 40px}
+ .bubble-machine{position:relative;top:auto;left:auto;width:210px}
+ .bubble-machine svg{width:125px}
+ .machine-nozzle{left:94px;top:38px}
+ .bubble-intro{position:relative;top:auto;left:auto;max-width:none;margin-top:32px}
+ .host-line{font-size:12px;margin-bottom:16px}
+ .bubble-intro h1{font-size:44px}
+ .bubble-intro>p:last-child{font-size:12px;margin-top:18px}
+ .bubble-field{position:relative;inset:auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px 16px;margin-top:42px}
+ .bubble-slot{width:min(100%,164px)!important;max-width:none!important;margin-top:0!important}
+ .bubble-slot:nth-child(3n+2){top:auto!important}
+ .bubble-slot:nth-child(2n){top:25px!important}
+ .bubble-slot-8{grid-column:auto}
+ .thought-bubble{padding:16px 10px}
+ .thought-bubble span,.bubble-slot-7 .thought-bubble span{font-size:15px}
+ .bubble-bottom{position:relative;inset:auto;margin-top:66px;grid-template-columns:1fr auto;gap:14px}
+ .bubble-bottom p{grid-column:1/-1;font-size:16px;min-height:52px}
+ .bubble-bottom .journey-link{grid-column:2;grid-row:2;font-size:12px;gap:10px}
+ .bubble-bottom .quiet-button{grid-column:1;grid-row:2}
+}
+@media(prefers-reduced-motion:reduce){.machine-wheel,.bubble-entry.is-blowing .thought-bubble,.bubble-slot.rippling .bubble-ripples i{animation:none!important}.bubble-slot.rippling .bubble-ripples{opacity:.6}.bubble-slot.rippling .bubble-ripples i:nth-child(2){transform:scale(.8)}.bubble-slot.rippling .bubble-ripples i:nth-child(3){transform:scale(.6)}}
