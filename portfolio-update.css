@@ -15,9 +15,10 @@
 #reader-body figure{margin:30px 0;white-space:normal}
 #reader-body figure img{display:block;width:auto;max-width:100%;max-height:75svh;height:auto;margin:0 auto;object-fit:contain}
 #reader-source[hidden]{display:none}
-.campus-new-photos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:90px;align-items:start}
-.campus-new-photos button{display:block;width:100%;padding:0;border:0;background:none}
-.campus-new-photos img{display:block;width:100%;height:auto}
+.campus-rail{height:660svh;margin:50px -8.14% 0}
+.campus-rail .rail-stage{background:#14131e}
+.campus-rail .rail-track button{cursor:zoom-in}
+.campus-rail .rail-track img{object-fit:contain;background:#171822}
 .campus-whisper{margin-top:45px}
 .contact-invitation{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:36px;width:100%;margin-bottom:30px}
 footer .contact-invitation p{margin:0;text-wrap:balance}
@@ -25,6 +26,7 @@ footer .contact-invitation p{margin:0;text-wrap:balance}
 .contact-invitation button{display:block;width:100%;padding:0;border:0;background:#fff}
 .contact-invitation img{display:block;width:100%;height:auto}
 .contact-invitation figcaption{font-size:12px;line-height:1.8;color:var(--gold);margin-top:12px}
-.contact-invitation button:focus-visible,.campus-new-photos button:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
-@media(max-width:600px){.campus-new-photos{grid-template-columns:1fr;gap:24px;margin-top:65px}.contact-invitation{grid-template-columns:1fr;gap:28px}.contact-invitation figure{width:min(280px,100%)}}
+.contact-invitation button:focus-visible,.campus-rail button:focus-visible{outline:2px solid var(--gold);outline-offset:6px}
+@media(max-width:600px){.campus-rail{height:auto;margin:30px -6.8% 0}.contact-invitation{grid-template-columns:1fr;gap:28px}.contact-invitation figure{width:min(280px,100%)}}
 @media(min-width:601px) and (prefers-reduced-motion:no-preference){.sketch-rail{height:840svh}}
+@media(prefers-reduced-motion:reduce){.campus-rail{height:auto}}
